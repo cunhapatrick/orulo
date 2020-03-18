@@ -33,28 +33,24 @@ export const Favorites = ({
 				</Style.Row>
 				{favorites.length > 0 && (
 					<Style.Row justify="center">
-						<Style.Col xs={12}>
-							<Pagination
-								defaultCurrent={1}
-								onChange={handlePagination}
-								total={total}
-							/>
-						</Style.Col>
+						<Pagination
+							defaultCurrent={1}
+							onChange={handlePagination}
+							total={total}
+						/>
 					</Style.Row>
 				)}
 			</>
 		) : (
 			<Row justify="center" align="bottom">
-				<Style.Col xs={12}>
-					<Style.Empty
-						imageStyle={{
-							width: 300,
-							height: 240,
-						}}
-						image={<img src="img/icons/broken-heart.png" alt="broken-heart" />}
-						description="Sem imóveis selecionados"
-					/>
-				</Style.Col>
+				<Style.Empty
+					imageStyle={{
+						width: 525,
+						height: 240,
+					}}
+					image={<img src="img/icons/broken-heart.png" alt="broken-heart" />}
+					description="Sem imóveis selecionados"
+				/>
 			</Row>
 		)}
 	</>
