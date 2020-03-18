@@ -69,7 +69,7 @@ export const Home = ({
 				</Row>
 				{/* Pagination */}
 				<Row justify="center">
-					<Style.Col>
+					<Style.Col xs={12}>
 						<Pagination
 							defaultCurrent={currentPage}
 							pageSize={12}
@@ -82,7 +82,7 @@ export const Home = ({
 			</>
 		) : (
 			<Row justify="center">
-				<Style.Col>
+				<Style.Col xs={12}>
 					<Style.Empty
 						image={<HomeFilled />}
 						imageStyle={{ fontSize: 240, height: 240 }}
@@ -95,11 +95,11 @@ export const Home = ({
 	return (
 		<>
 			<Style.PageHeader
-				title="Buildings"
+				title="Imóveis"
 				extra={[
 					'Ordenar: ',
 					<Button
-						key="dsf"
+						key="ordem"
 						type="link"
 						onClick={() =>
 							order === 'asc' ? handleOrder('desc') : handleOrder('asc')
