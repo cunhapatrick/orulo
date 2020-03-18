@@ -10,10 +10,15 @@ const runE2E = async () => {
 	await page.goto('http://localhost:3000', { waitUntil: 'networkidle2' });
 	await page.screenshot({ path: 'src/e2e/HomeLoading.png' });
 	await page.waitForSelector('.ant-pagination');
+	await page.waitFor(2000);
 	await page.screenshot({ path: 'src/e2e/HomeLoaded.png' });
 	await page.click('.ant-pagination-item-2');
+	await page.waitForSelector('.ant-pagination');
+	await page.waitFor(1000);
 	await page.screenshot({ path: 'src/e2e/TestPagination.png' });
 	await page.click('.ant-page-header-heading-extra button');
+	await page.waitForSelector('.ant-pagination');
+	await page.waitFor(1000);
 	await page.screenshot({ path: 'src/e2e/TestOrdenation.png' });
 	await page.click('.ant-card');
 	await page.waitForSelector('.title');
