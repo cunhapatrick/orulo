@@ -16,11 +16,19 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      - name: Install yarn
+        run: |
+          curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg
+          sudo apt-key add -
+          echo "deb https://dl.yarnpkg.com/debian/ stable main"
+          sudo tee /etc/apt/sources.list.d/yarn.list
+          sudo apt update
+          sudo apt install yarn
+
       - name: Build
         run: |
-          npm install
-          npm rum build
-
+          yarn
+          yarn build
       #- name: Run tests
       #  run: cross-env CI=true npm run test --bail
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -29,5 +37,5 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Firebase deploy
         run: |
-          sudo npm install -g firebase-tools
+          yarn global add firebase-tools
           firebase deploy --token ${{ secrets.FIREBASETOKEN }}
