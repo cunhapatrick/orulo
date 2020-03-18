@@ -5,6 +5,7 @@ import { Result } from 'antd';
 export default () => (
 	<div>
 		<Result
+			id="not-found"
 			status="404"
 			title="404"
 			subTitle="Desculpe, a página que você tentou acessar não existe"

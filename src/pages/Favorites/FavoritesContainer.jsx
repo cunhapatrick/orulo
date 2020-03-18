@@ -31,6 +31,7 @@ export const FavoritesContainer = ({
 	return (
 		<LayoutWrapper>
 			<Favorites
+				id="favorites"
 				favorites={currentFavorites}
 				total={total}
 				goBack={goBack}
