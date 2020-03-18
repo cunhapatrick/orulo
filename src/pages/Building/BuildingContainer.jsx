@@ -19,7 +19,11 @@ export const BuildingContainer = ({ storeBuildings }) => {
 
 	return (
 		<LayoutWrapper>
-			<Building building={storeBuildings.buildingSelected} goBack={goBack} />
+			<Building
+				id="building"
+				building={storeBuildings.buildingSelected}
+				goBack={goBack}
+			/>
 		</LayoutWrapper>
 	);
 };

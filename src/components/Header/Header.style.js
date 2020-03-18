@@ -16,7 +16,7 @@ export const Container = styled.div`
 	z-index: 3;
 `;
 export const Col = styled(col)``;
-export const CategoryCol = styled(Col)``;
+export const CategoryCol = styled(col)``;
 export const NavLink = styled(Link)`
 	color: black;
 	font-size: 18px;
