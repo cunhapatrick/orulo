@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
       - name: Install yarn
         run: |
           curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
@@ -21,10 +21,9 @@ jobs:
         run: |
           yarn
           yarn build
-      #- name: Run tests
-      #  run: cross-env CI=true npm run test --bail
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      #- uses: actions/checkout@v2
+
+      - name: Run tests
+       run: CI=true yarn test --bail
 
       # Runs a set of commands using the runners shell
       - name: Firebase deploy
