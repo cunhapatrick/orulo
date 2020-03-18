@@ -23,7 +23,7 @@ jobs:
           yarn build
 
       - name: Run tests
-       run: CI=true yarn test --bail
+        run: CI=true yarn test --bail
 
       # Runs a set of commands using the runners shell
       - name: Firebase deploy
