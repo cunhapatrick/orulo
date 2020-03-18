@@ -6,12 +6,18 @@ import BuildingCard from './BuildingCard';
 
 let wrapper;
 
+jest.mock('react-router-dom', () => ({
+	useHistory: () => ({
+		push: () => {},
+	}),
+}));
+
 describe('Component test', () => {
 	beforeEach(() => {
-		wrapper = shallow(<BuildingCard building={{}} />);
+		wrapper = shallow(<BuildingCard building={{}} selectBuilding={() => {}} />);
 	});
 
 	it('Should render without crashing', () => {
-		expect(wrapper.find('.product-card').length).toBeGreaterThan(0);
+		expect(wrapper.find('.building-card').length).toBeGreaterThan(0);
 	});
 });

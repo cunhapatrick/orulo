@@ -1,4 +1,4 @@
-export const formatCurrency = (value, decimals, currency) => {
+export const formatCurrency = (value, decimals = 2, currency = 'R$') => {
 	const preValue = !value ? 0 : value;
 	const number = !parseInt(preValue, 10)
 		? preValue

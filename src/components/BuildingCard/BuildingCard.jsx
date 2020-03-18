@@ -27,7 +27,9 @@ const BuildingCard = ({
 	return (
 		<Style.Container className="building-card">
 			<Style.CardBuilding
-				cover={<img src={building.default_image['520x280']} alt="building" />}
+				cover={
+					<img src={(building.default_image || {})['520x280']} alt="building" />
+				}
 			>
 				<Style.CardBuildingMeta title={building.name} />
 			</Style.CardBuilding>
