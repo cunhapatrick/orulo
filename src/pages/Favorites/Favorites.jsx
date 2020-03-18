@@ -18,7 +18,7 @@ export const Favorites = ({
 	goBack,
 }) => (
 	<>
-		<Style.PageHeader title="Favorites" onBack={() => goBack()} />
+		<Style.PageHeader title="Favoritos" onBack={() => goBack()} />
 		{favorites.length > 0 ? (
 			<>
 				<Style.Row justify="center" gutter={16}>
@@ -33,7 +33,7 @@ export const Favorites = ({
 				</Style.Row>
 				{favorites.length > 0 && (
 					<Style.Row justify="center">
-						<Style.Col>
+						<Style.Col xs={12}>
 							<Pagination
 								defaultCurrent={1}
 								onChange={handlePagination}
@@ -45,7 +45,7 @@ export const Favorites = ({
 			</>
 		) : (
 			<Row justify="center" align="bottom">
-				<Style.Col>
+				<Style.Col xs={12}>
 					<Style.Empty
 						imageStyle={{
 							width: 300,

@@ -12,7 +12,7 @@ import * as Style from './Building.style';
 
 export const Building = ({ building, goBack }) => (
 	<>
-		<Style.PageHeader title="Building" onBack={() => goBack()} />
+		<Style.PageHeader title="Imóvel" onBack={() => goBack()} />
 		<Style.Container>
 			<Row>
 				<Col span={8} xs={24} lg={8}>
