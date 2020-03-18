@@ -68,27 +68,23 @@ export const Home = ({
 					))}
 				</Row>
 				{/* Pagination */}
-				<Row justify="center">
-					<Style.Col xs={12}>
-						<Pagination
-							defaultCurrent={currentPage}
-							pageSize={12}
-							hideOnSinglePage
-							onChange={handlePagination}
-							total={total}
-						/>
-					</Style.Col>
+				<Row justify="center" style={{ marginBottom: '20px' }}>
+					<Pagination
+						defaultCurrent={currentPage}
+						pageSize={12}
+						hideOnSinglePage
+						onChange={handlePagination}
+						total={total}
+					/>
 				</Row>
 			</>
 		) : (
 			<Row justify="center">
-				<Style.Col xs={12}>
-					<Style.Empty
-						image={<HomeFilled />}
-						imageStyle={{ fontSize: 240, height: 240 }}
-						description="Nenhum imóvel encontrado"
-					/>
-				</Style.Col>
+				<Style.Empty
+					image={<HomeFilled />}
+					imageStyle={{ fontSize: 240, height: 240 }}
+					description="Nenhum imóvel encontrado"
+				/>
 			</Row>
 		);
 
