@@ -12,13 +12,10 @@
 The project is a mercado livre clone, that has just some features related with
 the e-commerce:
 
-- Has some filters that can be applied by the user, ex: like select which category (source) the user want;
-- Can order the products ascending or descending by title;
-- Can search for keywords;
-- Can paginate throught the selected products (or by all if no filter is applied);
+- Has a price order filter that can be applied by the user;
+- Can paginate throught the selected products;
 - Has a login/signup system that is stored on the localStorage of the browser;
 - The user can select favorites products and can see the list on another page of the project;
-  P.S: Because of the limitation of the free graphql API's, I load all the data inside the redux, and I do all the process's of pagination on the client-side.
 
 ## Technologies
 
@@ -30,7 +27,6 @@ Project is created with:
 - Commitlint version 8.3.5
 - Cross-env version 7.0.0
 - Eslint version 5.16.0
-- Faker version 4.1.0
 - Husky version 4.2.1
 - Lint-staged version 10.0.8
 - Jest version 24.9.0
@@ -61,6 +57,8 @@ To assure the quality of the project, some measures have been taken:
 
 ## Setup
 
+### Local Development
+
 To run this project on development mode, install it locally using yarn:
 
 ```
@@ -74,3 +72,13 @@ To run tests, execute the following command `$ yarn test`
 To run the depuration with reactotron, install it locally following those [instructions](https://github.com/infinitered/reactotron/blob/master/docs/installing.md). After the installation of reactotron locally execute reactotron and start the application on development mode.
 
 To run this project on production mode build it using yarn `$ yarn build` then deploy the builded bundle to the desired host.
+
+### CI/CD
+
+The project has a previous configuration that build, test and deploy to the firebase hosting environment, to setup a environment of your own:
+
+- Create a project using one google account on [Firebase Console](https://console.firebase.google.com/u/0/) by following their tutorial steps;
+- Run on terminal `$ firebase login:ci`, copy the firebase token, and on github go to your online repository of the project > Settings > Secrets, add a secret with the name `FIREBASE_TOKEN` and paste your token;
+- On firebase console, create a web web inside your project and follow their instructions;
+- on your terminal go to your project folder and run `$ firebase init`, chose the hosting option, when asked with public folder deploy, write build and pass the default value on the rest of the options;
+  After that the environment is set and good to go;
