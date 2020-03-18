@@ -1,4 +1,5 @@
 # Órulo Test Frontend
+![CI/CD](https://github.com/cunhapatrick/orulo-test/workflows/CI/CD/badge.svg?branch=master)
 
 ## Table of contents
 
