@@ -48,8 +48,9 @@ export const Favorites = ({
 				<Style.Col xs={12}>
 					<Style.Empty
 						imageStyle={{
-							width: 300,
+							width: 525,
 							height: 240,
+							textAlign: 'center',
 						}}
 						image={<img src="img/icons/broken-heart.png" alt="broken-heart" />}
 						description="Sem imóveis selecionados"
